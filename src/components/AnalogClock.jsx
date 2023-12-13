@@ -11,9 +11,9 @@ const AnalogClock = () => {
 
   const clock = () => {
     let date = new Date();
-    let hh = date.getHours() * 30;
-    let mm = date.getMinutes() * 6;
-    let ss = date.getSeconds() * 6;
+    let hh = -date.getHours() * 30;
+    let mm = -date.getMinutes() * 6;
+    let ss = -date.getSeconds() * 6;
 
     setHour(`rotateZ(${hh + mm / 12}deg)`);
     setMinutes(`rotateZ(${mm}deg)`);
