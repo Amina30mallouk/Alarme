@@ -15,7 +15,7 @@ const ProximitySensor = () => {
   const clock = () => {
     let date = new Date();
     let ss = date.getSeconds() * 6;
-    setSeconds(`rotateZ(${ss}deg)`);
+    setSeconds(`rotateZ(${ss + 180}deg)`);
   };
 
   setInterval(clock, 1000);

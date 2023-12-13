@@ -10,11 +10,11 @@ function App() {
   return (
     <section className="clock container" >
      
-      <ProximitySensor /> 
-     
       <div className="clock-container grid">
         <div className="clock-content grid">
           <Alarm>
+
+            <ProximitySensor /> 
             <AnalogClock />
             <DigitalClock />
             <AlarmOption />
