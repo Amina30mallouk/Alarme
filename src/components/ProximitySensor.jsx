@@ -2,8 +2,6 @@
 import RickyMonty from '../assets/rickymonty.png';
 import Eye from '../assets/eye.png';
 import './proximitySensor.css';
-
-// ....... import jdida
 import React, { useState, useContext } from 'react';
 import { AlarmContext } from '../context/Alarm';
 
