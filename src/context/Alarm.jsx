@@ -46,32 +46,36 @@ function Alarm({ children }) {
       const currentTime = new Date();
       const currentSecond = currentTime.getSeconds();
 
-      if (currentSecond == hourDigital && currentSecond < 60) {
+      if (currentSecond == hourDigital && currentSecond < 60 ) {
         setShowSpinner(true);
       } else {
         setShowSpinner(false);
+      }
+      if (alarmTime === `${hourDigital}:${minutesDigital} ${amPm}`){
+              setShowSpinner(true);
       }
     }, 1000);
     return () => clearInterval(intervalId);
   }, [hourDigital, minutesDigital]);
 
   if (alarmTime === `${hourDigital}:${minutesDigital} ${amPm}`) {
+
     alarm.play();
     alarm.loop = true;
 
     setTimeout(() => {
-        alarm.pause();  
-        setAlarmTime('');
-        // alarm.currentTime = 0;  
-        alarm.loop = false;  
+      pauseAlarm() ;
+      alarm.loop = false;
       }, 60000);  
     }
-    
+
   
   const pauseAlarm = () => {
     alarm.pause();
     setAlarmTime('');
+    
   };
+
   return (
     <AlarmContext.Provider
       value={{
