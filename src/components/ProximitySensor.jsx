@@ -7,8 +7,6 @@ import { AlarmContext } from '../context/Alarm';
 
 
 
-
-
 const ProximitySensor = () => {
 
   const [seconds, setSeconds] = useState('');

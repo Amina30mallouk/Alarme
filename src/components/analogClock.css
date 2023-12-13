@@ -138,3 +138,17 @@
     transform: scale3d(1.2, 1.2, 1.2) rotate3d(0, 0, 1, -6deg);
   }
 }
+
+.Btn {
+  width: 320px;
+  margin-top: 50px;
+  height: 100px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 25px;
+  background-color: var(--first-color);
+  cursor: pointer;
+}
+
