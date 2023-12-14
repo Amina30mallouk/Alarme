@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { FcAlarmClock } from 'react-icons/fc';
 import { AlarmContext } from '../context/Alarm';
 import './analogClock.css';
@@ -10,29 +10,25 @@ const AnalogClock = () => {
   const { hasAlarm } = useContext(AlarmContext);
   const [reverse, setReverse] = useState(false);
 
+  useEffect(() => {
+    const clockInterval = setInterval(clock, 1000);
+    return () => clearInterval(clockInterval);
+  }, [reverse]);
+
   const clock = () => {
 
     let date = new Date();
-    if(reverse){
     let hh = date.getHours() * 30;
     let mm = date.getMinutes() * 6;
     let ss = date.getSeconds() * 6;
+
     setHour(`rotateZ(${hh + mm / 12}deg)`);
     setMinutes(`rotateZ(${mm}deg)`);
-    setSeconds(`rotateZ(${ss}deg)`);
+    // setSeconds(`rotateZ(${ss}deg)`);
+    
+    setSeconds(`rotateZ(${reverse ? -ss : ss}deg)`);
 
-     }else{
-      let hh = -date.getHours() * 30;
-      let mm = -date.getMinutes() * 6;
-      let ss = -date.getSeconds() * 6;
-
-      setHour(`rotateZ(${hh + mm / 12}deg)`);
-      setMinutes(`rotateZ(${mm}deg)`);
-      setSeconds(`rotateZ(${ss}deg)`);
-
-     }
-   
-  
+    
   };
 
 
@@ -49,6 +45,7 @@ const AnalogClock = () => {
          <botton  onClick={handleBottonClick}
           className = "Btn" > Click here To reverse </botton>
           <br/><br/><br/><br/><br/><br/>
+
     <div className="clock-circle" >
     
       <FcAlarmClock className={`alarm-icon ${hasAlarm && 'active'}`} />
