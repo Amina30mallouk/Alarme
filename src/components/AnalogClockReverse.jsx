@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { FcAlarmClock } from 'react-icons/fc';
 import { AlarmContext } from '../context/Alarm';
 import './analogClock.css';
@@ -33,8 +33,6 @@ const AnalogClock = () => {
   setInterval(clock, 1000);
 
  
-
-
   return (
 
 
