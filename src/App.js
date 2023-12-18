@@ -26,9 +26,11 @@ function App() {
             {reverse ? <AnalogClockReverse /> : <AnalogClock />}
             <DigitalClock />
             <AlarmOption />
+            <div className="button-container">
             <button onClick={handleButtonClick} className="Btn">
               {reverse ? 'Normal ' : 'Reverse '}
             </button>
+            </div>
           </Alarm>
         </div>
 

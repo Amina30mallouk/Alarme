@@ -1,11 +1,10 @@
+
+
 .clock-circle {
   position: relative;
   width: 260px;
   height: 260px;
-  box-shadow: -6px -6px 16px var(--white-color),
-    6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1),
-    inset 6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1),
-    inset -6px -6px 16px var(--white-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   justify-self: center;
   display: flex;
@@ -13,19 +12,23 @@
   align-items: center;
   transition: 0.4s;
 }
+
 .alarm-icon {
   position: absolute;
   font-size: 45px;
   left: -25px;
   top: -20px;
 }
+
 .active {
   animation: alarm 2s infinite alternate;
 }
+
 .clock-content {
   align-self: center;
   row-gap: 2rem;
 }
+
 .clock-twelve,
 .clock-three,
 .clock-six,
@@ -35,30 +38,32 @@
   height: 1px;
   background-color: var(--first-color);
 }
+
 .clock-twelve,
 .clock-six {
   transform: translateX(-50%) rotate(90deg);
 }
+
 .clock-twelve {
   top: 1.25rem;
   left: 50%;
 }
+
 .clock-three {
   top: 50%;
   right: 0.75rem;
 }
+
 .clock-six {
   bottom: 1.25rem;
   left: 50%;
 }
+
 .clock-nine {
   left: 0.75rem;
   top: 50%;
 }
-.clock-nine {
-  left: 0.75rem;
-  top: 50%;
-}
+
 .clock-rounder {
   width: 0.75rem;
   height: 0.75rem;
@@ -67,6 +72,7 @@
   border: 2px solid var(--body-color);
   z-index: var(--z-tooltip);
 }
+
 .clock-hour,
 .clock-minutes,
 .clock-seconds {
@@ -79,32 +85,37 @@
   width: 105px;
   height: 140px;
 }
+
 .clock-hour::before {
   content: '';
   position: absolute;
-  background-color: var(--text-color);
+  background-color: var(--first-color);
   width: 0.25rem;
   height: 5.5rem;
   border-radius: 0.75rem;
   z-index: var(--z-normal);
 }
+
 .clock-minutes {
   width: 136px;
   height: 186px;
 }
+
 .clock-minutes::before {
   content: '';
   position: absolute;
-  background-color: var(--text-color);
+  background-color: var(--first-color);
   width: 0.25rem;
   height: 6.5rem;
   border-radius: 0.75rem;
   z-index: var(--z-normal);
 }
+
 .clock-seconds {
   width: 130px;
   height: 200px;
 }
+
 .clock-seconds::before {
   content: '';
   position: absolute;
@@ -130,7 +141,7 @@
   70%,
   90% {
     transform: scale3d(1.2, 1.2, 1.2) rotate3d(0, 0, 1, 6deg);
-    text-shadow: 0 1px 3px rgb(0 0 0/30%);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
   40%,
   60%,
@@ -151,4 +162,3 @@
   background-color: var(--first-color);
   cursor: pointer;
 }
-

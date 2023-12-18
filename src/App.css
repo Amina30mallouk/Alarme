@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-  /* Colors */
+
   --hue-color: 240;
   --first-color: hsl(var(--hue-color), 53%, 49%);
   --title-color: hsl(var(--hue-color), 53%, 15%);
@@ -9,20 +9,20 @@
   --text-color-light: hsl(var(--hue-color), 12%, 65%);
   --white-color: #fff;
   --body-color: hsl(var(--hue-color), 24%, 94%);
-  /* Font and Typography */
+
   --body-font: 'Poppins', sans-serif;
   --biggest-font-size: 3rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
   --tiny-font-size: 0.625rem;
-  /* Font Weight */
+
   --font-medium: 500;
-  /* Margin Bottom */
+
   --mb-0-25: 0.25rem;
   --mb-1: 1rem;
   --mb-1-5: 1.5rem;
   --mb-2-5: 2.5rem;
-  /* z index */
+
   --z-normal: 1;
   --z-tooltip: 10;
 }
@@ -35,7 +35,7 @@
     --tiny-font-size: 0.75rem;
   }
 }
-/* BASE */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -51,7 +51,7 @@ body {
 a {
   text-decoration: none;
 }
-/* Reusable CSS Classes */
+
 .container {
   max-width: 968px;
   display: flex;
@@ -62,33 +62,46 @@ a {
 .grid {
   display: grid;
 }
-/* Clock */
+
 .clock-container {
   height: 100vh;
   grid-template-rows: 1fr max-content;
 }
-/* Media Queries */
-/* For large devices */
+
 @media screen and (min-width: 968px) {
   .container {
     margin-left: auto;
     margin-right: auto;
   }
 }
-.Btn{
+
+
+.reverse .Btn {
+  background-color: #a09db4;
+}
+
+
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-wrap: wrap;
+  margin-top: 10px; 
+}
+
+.Btn {
   width: 320px;
-  margin-top: 50px;
+  margin-top: 20px; 
   height: 100px;
   border: none;
   outline: none;
   border-radius: 5px;
   color: #fff;
   font-size: 25px;
-  background-color: var(--first-color);
+  background-color:rgb(35, 32, 36);
   cursor: pointer;
 }
 
-.reverse .Btn {
-  background-color: #271895;
-  /* Autres styles spécifiques à reverse */
-}
+

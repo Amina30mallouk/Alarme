@@ -1,18 +1,24 @@
+
+
 .option-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 20px; /* Ajustez selon vos besoins */
 }
+
 .wrapper-option {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .disable {
   pointer-events: none;
 }
+
 .wrapper-option select {
   padding: 10px 15px;
   border-radius: 5px;
@@ -26,23 +32,28 @@
     inset 3px 3px 5px hsla(var(--hue-color), 30%, 86%, 1),
     inset -3px -3px 5px var(--white-color);
   cursor: pointer;
+  width: 200px; /* Ajustez selon vos besoins */
 }
+
 select::-webkit-scrollbar {
   width: 8px;
 }
+
 select::-webkit-scrollbar-thumb {
   background: orange;
   border-radius: 8px;
   border-right: 2px solid #fff;
 }
+
 select option {
   display: block;
   background: var(--first-color);
   color: #fff;
 }
+
 .setAlarm-btn {
-  width: 320px;
-  margin-top: 30px;
+  width: 200px;
+  margin-top: 20px;
   height: 40px;
   border: none;
   outline: none;
@@ -53,6 +64,7 @@ select option {
   background-color: var(--first-color);
   cursor: pointer;
 }
+
 .play {
   background-color: orange;
   color: #000;
