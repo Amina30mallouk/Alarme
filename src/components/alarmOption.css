@@ -58,7 +58,7 @@ select option {
   border: none;
   outline: none;
   border-radius: 5px;
-  color: #fff;
+  color: #fff3f3;
   font-size: 16px;
   letter-spacing: 1px;
   background-color: var(--first-color);
