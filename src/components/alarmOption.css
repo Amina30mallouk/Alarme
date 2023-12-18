@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px; /* Ajustez selon vos besoins */
+  margin-top: 20px; 
 }
 
 .wrapper-option {
@@ -32,7 +32,7 @@
     inset 3px 3px 5px hsla(var(--hue-color), 30%, 86%, 1),
     inset -3px -3px 5px var(--white-color);
   cursor: pointer;
-  width: 200px; /* Ajustez selon vos besoins */
+  width: 200px; 
 }
 
 select::-webkit-scrollbar {
